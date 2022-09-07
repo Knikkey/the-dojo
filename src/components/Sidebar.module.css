@@ -37,7 +37,7 @@
   margin-right: 10px;
   filter: invert(100%);
 }
-.sidebar .links a.active {
+.sidebar .links a[class="active"] {
   color: #555;
   background: var(--bg-color);
   border-radius: 20px 0 0 20px;

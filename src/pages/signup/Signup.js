@@ -50,10 +50,10 @@ export default function Signup() {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         ></input>
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="displayName">Display Name:</label>
         <input
           type="text"
-          id="username"
+          id="displayName"
           onChange={(e) => setDisplayName(e.target.value)}
           value={displayName}
         ></input>
