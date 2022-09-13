@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useCollection } from "../../hooks/useCollection";
 import { timestamp } from "../../firebase/config";
 import { useAuthContext } from "../../hooks/useAuthContext";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./Create.module.css";
 
@@ -19,7 +19,7 @@ export default function Create() {
   const { documents } = useCollection("users");
   const { user } = useAuthContext();
   const { addDocument, response } = useFirestore("projects");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [details, setDetails] = useState("");
@@ -72,9 +72,9 @@ export default function Create() {
 
   useEffect(() => {
     if (response.success) {
-      history.push("/");
+      navigate("/");
     }
-  }, [response.success, history]);
+  }, [response.success, navigate]);
 
   useEffect(() => {
     if (documents) {
