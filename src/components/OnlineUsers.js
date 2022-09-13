@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import { useCollection } from "../hooks/useCollection";
 import Avatar from "./Avatar";
 
